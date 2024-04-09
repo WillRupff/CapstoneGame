@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuqtayu56oev5"]
+
+[ext_resource type="MeshLibrary" uid="uid://dedkk0gj4td08" path="res://Levels/Mesh_Lib.meshlib" id="1_n3ie7"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0190232, 1.08699, -0.000953436)
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="GridMap" type="GridMap" parent="Ground"]
+mesh_library = ExtResource("1_n3ie7")
+cell_size = Vector3(4, 4, 4)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15728, 4.52872, 3.94717)

@@ -38,19 +38,19 @@ size = Vector3(100, 1, 100)
 [node name="CSGSphere3D" type="CSGSphere3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15728, 4.52872, 3.94717)
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+[node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.48169, 0)
 script = ExtResource("1_2j310")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.40465, 0)
 shape = SubResource("CapsuleShape3D_7icke")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.70067, 0)
 mesh = SubResource("CapsuleMesh_ao2x3")
 
-[node name="Neck" type="Node3D" parent="CharacterBody3D"]
+[node name="Neck" type="Node3D" parent="Player"]
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck"]
+[node name="Camera3D" type="Camera3D" parent="Player/Neck"]
 transform = Transform3D(-0.907777, 0, 0.419452, 0, 1, 0, -0.419452, 0, -0.907777, 0.044776, 7.20271, 0.206961)
