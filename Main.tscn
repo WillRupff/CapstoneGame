@@ -40,7 +40,7 @@ size = Vector3(100, 1, 100)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15728, 4.52872, 3.94717)
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.48169, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.20852, -3.48169, 0)
 script = ExtResource("1_2j310")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
