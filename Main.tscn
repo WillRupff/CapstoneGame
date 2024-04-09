@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt04o3hxkq6dk"]
+[gd_scene load_steps=8 format=3 uid="uid://dt04o3hxkq6dk"]
 
 [ext_resource type="Script" path="res://FirstPersonController.gd" id="1_2j310"]
+[ext_resource type="PackedScene" uid="uid://cuqtayu56oev5" path="res://Levels/Level1.tscn" id="2_v6wut"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e1ago"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -54,3 +55,5 @@ mesh = SubResource("CapsuleMesh_ao2x3")
 
 [node name="Camera3D" type="Camera3D" parent="Player/Neck"]
 transform = Transform3D(-0.907777, 0, 0.419452, 0, 1, 0, -0.419452, 0, -0.907777, 0.044776, 7.20271, 0.206961)
+
+[node name="Level1" parent="." instance=ExtResource("2_v6wut")]
