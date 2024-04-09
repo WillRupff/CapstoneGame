@@ -11,7 +11,7 @@ size = Vector3(100, 1, 100)
 
 [node name="GridMap" type="GridMap" parent="Ground"]
 mesh_library = ExtResource("1_n3ie7")
-cell_size = Vector3(4, 4, 4)
+cell_size = Vector3(1, 2, 1)
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15728, 4.52872, 3.94717)
