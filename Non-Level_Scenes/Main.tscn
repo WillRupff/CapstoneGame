@@ -1,21 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://dt04o3hxkq6dk"]
+[gd_scene load_steps=9 format=3 uid="uid://dt04o3hxkq6dk"]
 
-[ext_resource type="Script" path="res://FirstPersonController.gd" id="1_2j310"]
-[ext_resource type="PackedScene" uid="uid://cuqtayu56oev5" path="res://Levels/Level1.tscn" id="2_v6wut"]
+[ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_4sgls"]
+[ext_resource type="PackedScene" uid="uid://cuqtayu56oev5" path="res://Levels/Level1.tscn" id="2_46h3a"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e1ago"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-sky_energy_multiplier = 1.45
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y1o78"]
 
 [sub_resource type="Sky" id="Sky_j4m27"]
-sky_material = SubResource("ProceduralSkyMaterial_e1ago")
+sky_material = SubResource("ShaderMaterial_y1o78")
 
 [sub_resource type="Environment" id="Environment_4yhfw"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.14902, 0, 0.701961, 1)
 sky = SubResource("Sky_j4m27")
+ambient_light_color = Color(0.631373, 0.705882, 0.882353, 1)
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w2qqo"]
+albedo_color = Color(0.156863, 0.164706, 0.0392157, 0.941176)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7icke"]
 
@@ -35,13 +37,14 @@ environment = SubResource("Environment_4yhfw")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0190232, 1.08699, -0.000953436)
 use_collision = true
 size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_w2qqo")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="Level"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15728, 4.52872, 3.94717)
 
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.20852, -3.48169, 0)
-script = ExtResource("1_2j310")
+script = ExtResource("1_4sgls")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.40465, 0)
@@ -56,4 +59,4 @@ mesh = SubResource("CapsuleMesh_ao2x3")
 [node name="Camera3D" type="Camera3D" parent="Player/Neck"]
 transform = Transform3D(-0.907777, 0, 0.419452, 0, 1, 0, -0.419452, 0, -0.907777, 0.044776, 7.20271, 0.206961)
 
-[node name="Level1" parent="." instance=ExtResource("2_v6wut")]
+[node name="Level1" parent="." instance=ExtResource("2_46h3a")]
