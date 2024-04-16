@@ -14,4 +14,4 @@ func _on_level_1_level_completed():
 	final_menu.initialize(total_play_time)
 
 func _on_final_menu_retried():
-	get_tree().reload_current_scene
+	get_tree().reload_current_scene()
