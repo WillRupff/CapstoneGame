@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://wi34tis5pbj"]
+
+[ext_resource type="Script" path="res://Scripts/FinalMenu.gd" id="1_0mhu2"]
+[ext_resource type="FontFile" uid="uid://8rstxha6xjdi" path="res://Connection.otf" id="2_rx2x5"]
+[ext_resource type="FontFile" uid="uid://dhc0x3h50ovym" path="res://Non-Level_Scenes/GameEndFont.tres" id="3_8gcyt"]
+
+[node name="FinalMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0mhu2")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Column" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/Column"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rx2x5")
+theme_override_font_sizes/font_size = 48
+text = "Success!"
+horizontal_alignment = 1
+
+[node name="Time" type="Label" parent="CenterContainer/Column"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8gcyt")
+theme_override_font_sizes/font_size = 36
+text = "Your time was...1m"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Row" type="HBoxContainer" parent="CenterContainer/Column"]
+layout_mode = 2
+
+[node name="TryAgain" type="Button" parent="CenterContainer/Column/Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_8gcyt")
+text = "Try again"
+
+[node name="Exit" type="Button" parent="CenterContainer/Column/Row"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_8gcyt")
+text = "Exit"
+
+[connection signal="pressed" from="CenterContainer/Column/Row/TryAgain" to="." method="_on_try_again_pressed"]
+[connection signal="pressed" from="CenterContainer/Column/Row/Exit" to="." method="_on_exit_pressed"]
