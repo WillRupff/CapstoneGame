@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxv3uugy82gfo"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_huxls"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_e1mtc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pucej"]
+albedo_color = Color(0.439216, 0.145098, 0.631373, 1)
+
+[node name="Objective" type="Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("SphereShape3D_huxls")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("SphereMesh_e1mtc")
+surface_material_override/0 = SubResource("StandardMaterial3D_pucej")

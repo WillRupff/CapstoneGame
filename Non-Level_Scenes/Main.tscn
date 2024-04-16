@@ -39,9 +39,6 @@ use_collision = true
 size = Vector3(100, 1, 100)
 material = SubResource("StandardMaterial3D_w2qqo")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15728, 4.52872, 3.94717)
-
 [node name="Player" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.416775, -2.94122, 1.55524)
 script = ExtResource("1_4sgls")
