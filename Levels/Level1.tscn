@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuqtayu56oev5"]
+[gd_scene load_steps=4 format=3 uid="uid://cuqtayu56oev5"]
 
 [ext_resource type="MeshLibrary" uid="uid://chjb771eqv0yy" path="res://Levels/MazeBlock.meshlib" id="1_8qyp1"]
+[ext_resource type="Script" path="res://Scripts/Level1.gd" id="1_jldel"]
 [ext_resource type="PackedScene" uid="uid://dxv3uugy82gfo" path="res://Levels/Objective.tscn" id="2_64pqg"]
 
 [node name="Level1" type="Node3D"]
+script = ExtResource("1_jldel")
 
 [node name="Ground" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0190232, 1.08699, -0.000953436)
@@ -19,3 +21,5 @@ data = {
 
 [node name="Objective" parent="." instance=ExtResource("2_64pqg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.4746, 4.65405, 41.7542)
+
+[connection signal="body_entered" from="Objective" to="." method="_on_objective_body_entered"]

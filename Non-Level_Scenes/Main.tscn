@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dt04o3hxkq6dk"]
+[gd_scene load_steps=11 format=3 uid="uid://dt04o3hxkq6dk"]
 
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_4sgls"]
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_u7m3g"]
 [ext_resource type="PackedScene" uid="uid://cuqtayu56oev5" path="res://Levels/Level1.tscn" id="2_46h3a"]
 [ext_resource type="PackedScene" uid="uid://wi34tis5pbj" path="res://Non-Level_Scenes/FinalMenu.tscn" id="3_5i10f"]
 
@@ -25,6 +26,7 @@ albedo_color = Color(0.156863, 0.164706, 0.0392157, 0.941176)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ao2x3"]
 
 [node name="Game" type="Node3D"]
+script = ExtResource("1_u7m3g")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.633489, 0.773752, 0, -0.773752, 0.633489, 0, 13.6249, 0)
@@ -61,3 +63,6 @@ transform = Transform3D(-0.907777, 0, 0.419452, 0, 1, 0, -0.419452, 0, -0.907777
 
 [node name="FinalMenu" parent="." instance=ExtResource("3_5i10f")]
 visible = false
+
+[connection signal="level_completed" from="Level1" to="." method="_on_level_1_level_completed"]
+[connection signal="retried" from="FinalMenu" to="." method="_on_final_menu_retried"]
