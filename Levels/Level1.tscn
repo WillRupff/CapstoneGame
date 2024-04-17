@@ -20,6 +20,6 @@ data = {
 }
 
 [node name="Objective" parent="." instance=ExtResource("2_64pqg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.4746, 4.65405, 41.7542)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.44757, 4.65405, 10.5118)
 
 [connection signal="body_entered" from="Objective" to="." method="_on_objective_body_entered"]
