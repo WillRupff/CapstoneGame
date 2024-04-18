@@ -66,7 +66,7 @@ size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("2_ncc5w")
 theme_override_font_sizes/font_size = 100
-text = "MINE MAZE "
+text = "MAZED AND CONFUSED "
 
 [node name="OpeningSceneBackground" type="Sprite2D" parent="."]
 show_behind_parent = true
