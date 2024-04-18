@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://wi34tis5pbj"]
 
 [ext_resource type="Script" path="res://Scripts/FinalMenu.gd" id="1_0mhu2"]
-[ext_resource type="FontFile" uid="uid://8rstxha6xjdi" path="res://Connection.otf" id="2_rx2x5"]
+[ext_resource type="FontFile" uid="uid://8rstxha6xjdi" path="res://UI Scenes/Connection.otf" id="2_rx2x5"]
 [ext_resource type="FontFile" uid="uid://dhc0x3h50ovym" path="res://Non-Level_Scenes/GameEndFont.tres" id="3_8gcyt"]
 
 [node name="FinalMenu" type="Control"]

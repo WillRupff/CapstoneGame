@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bicqtiockvh3f"]
 
-[ext_resource type="Script" path="res://OpeningMenu.gd" id="1_g00fo"]
-[ext_resource type="FontFile" uid="uid://dhc0x3h50ovym" path="res://Non-Level_Scenes/GameEndFont.tres" id="2_nvfhn"]
+[ext_resource type="Script" path="res://OpeningMenu.gd" id="1_p5dbo"]
+[ext_resource type="FontFile" uid="uid://dhc0x3h50ovym" path="res://Non-Level_Scenes/GameEndFont.tres" id="2_ncc5w"]
 
 [node name="OpeningMenu" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_g00fo")
+script = ExtResource("1_p5dbo")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -29,21 +29,21 @@ grow_vertical = 2
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_nvfhn")
+theme_override_fonts/font = ExtResource("2_ncc5w")
 theme_override_font_sizes/font_size = 30
 text = "START"
 
 [node name="InstructionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_nvfhn")
+theme_override_fonts/font = ExtResource("2_ncc5w")
 theme_override_font_sizes/font_size = 30
 text = "INSTRUCTIONS"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_nvfhn")
+theme_override_fonts/font = ExtResource("2_ncc5w")
 theme_override_font_sizes/font_size = 30
 text = "QUIT"
 

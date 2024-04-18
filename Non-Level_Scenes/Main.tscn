@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_4sgls"]
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_u7m3g"]
 [ext_resource type="PackedScene" uid="uid://cuqtayu56oev5" path="res://Levels/Level1.tscn" id="2_46h3a"]
-[ext_resource type="PackedScene" uid="uid://wi34tis5pbj" path="res://Non-Level_Scenes/FinalMenu.tscn" id="3_5i10f"]
+[ext_resource type="PackedScene" uid="uid://wi34tis5pbj" path="res://UI Scenes/FinalMenu.tscn" id="3_5i10f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y1o78"]
 
