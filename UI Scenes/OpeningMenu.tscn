@@ -29,6 +29,7 @@ grow_vertical = 2
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_top = NodePath("../QuitButton")
 theme_override_fonts/font = ExtResource("2_ncc5w")
 theme_override_font_sizes/font_size = 30
 text = "START"
@@ -43,9 +44,28 @@ text = "INSTRUCTIONS"
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_bottom = NodePath("../StartButton")
 theme_override_fonts/font = ExtResource("2_ncc5w")
 theme_override_font_sizes/font_size = 30
 text = "QUIT"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -46.5
+offset_right = 46.5
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_ncc5w")
+theme_override_font_sizes/font_size = 100
+text = "MINE MAZE "
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/InstructionsButton" to="." method="_on_instructions_button_pressed"]
