@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8qvjjfj6daux"]
+[gd_scene load_steps=3 format=3 uid="uid://c8qvjjfj6daux"]
 
 [ext_resource type="Script" path="res://Scripts/Instructions.gd" id="1_i08yb"]
+[ext_resource type="FontFile" uid="uid://dhc0x3h50ovym" path="res://Non-Level_Scenes/GameEndFont.tres" id="2_1audi"]
 
 [node name="Instructions" type="Control"]
 layout_mode = 3
@@ -22,6 +23,8 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_1audi")
+theme_override_font_sizes/font_size = 30
 text = "INSTRUCTIONS
 
 Control Guidelines:
@@ -41,6 +44,8 @@ layout_mode = 2
 offset_top = 572.0
 offset_right = 191.0
 offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("2_1audi")
+theme_override_font_sizes/font_size = 25
 text = "HOME SCREEN"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
