@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://br8q3lo6bvh65"
+path="res://.godot/imported/506052__mellau__button-click-3 (1).wav-dfa51f816178ef81b988a934697b3ea4.sample"
+
+[deps]
+
+source_file="res://Audio/506052__mellau__button-click-3 (1).wav"
+dest_files=["res://.godot/imported/506052__mellau__button-click-3 (1).wav-dfa51f816178ef81b988a934697b3ea4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
