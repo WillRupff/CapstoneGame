@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dt04o3hxkq6dk"]
+[gd_scene load_steps=12 format=3 uid="uid://dt04o3hxkq6dk"]
 
 [ext_resource type="Script" path="res://Scripts/FirstPersonController.gd" id="1_4sgls"]
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_u7m3g"]
 [ext_resource type="PackedScene" uid="uid://cuqtayu56oev5" path="res://Levels/Level1.tscn" id="2_46h3a"]
 [ext_resource type="PackedScene" uid="uid://wi34tis5pbj" path="res://UI Scenes/FinalMenu.tscn" id="3_5i10f"]
+[ext_resource type="AudioStream" uid="uid://dbi63iktvevvi" path="res://Audio/732872__szegvari__mechanical-machinery-technology.wav" id="5_j4tv0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_y1o78"]
 
@@ -63,6 +64,10 @@ transform = Transform3D(-0.907777, 0, 0.419452, 0, 1, 0, -0.419452, 0, -0.907777
 
 [node name="FinalMenu" parent="." instance=ExtResource("3_5i10f")]
 visible = false
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_j4tv0")
+autoplay = true
 
 [connection signal="level_completed" from="Level1" to="." method="_on_level_1_level_completed"]
 [connection signal="retried" from="FinalMenu" to="." method="_on_final_menu_retried"]
