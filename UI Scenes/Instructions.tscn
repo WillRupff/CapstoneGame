@@ -40,6 +40,9 @@ Go as fast as you can to complete the maze in the shortest time
 If playing with multiple people, each can take turns, one-by-one, to see 
 who can go the fastest
 
+HINT: Use block colors as markers to keep track of where you might have 
+already visited in the maze
+
 Have fun!!"
 horizontal_alignment = 1
 
