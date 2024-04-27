@@ -32,7 +32,7 @@ data = {
 mesh_library = ExtResource("4_4o37m")
 cell_size = Vector3(6, 6, 6)
 data = {
-"cells": PackedInt32Array(6, 2, 0, 65532, 6, 0, 0, 65532, 0, 65532, 65529, 0, 65535, 65535, 0, 65530, 65534, 0)
+"cells": PackedInt32Array(6, 2, 0, 65532, 6, 0, 0, 65532, 0, 65532, 65529, 0, 65530, 65534, 0)
 }
 
 [node name="Objective" parent="." instance=ExtResource("2_64pqg")]
